@@ -1,0 +1,79 @@
+
+Week 3 Research
+
+Prompts
+
+What are ten different data types MySQL provides?
+
+Char
+Varchar
+TEXT
+BLOB
+Int
+Float
+Double
+Date
+Timestamp
+Boolean
+
+
+
+How is each data type you described used, and what makes it unique?
+
+1.) Char
+Char is a character field of fixed length. 
+Char is padded to length with spaces upon storage and provides better 
+perfomance than Varchar when the character field length is a know quantity. 
+
+2.) Varchar
+Varchar is a non binary variable length string of up to 64K characters with
+a length prefix of 1 or 2 bytes.
+Use when a string is of an bounded but not predetermined length.
+Varchar does not strip nor pad the input string with spaces.
+
+3.) TEXT
+Text is a variable sized text string of up to 4GB.  TEXT does not pad 
+or truncate spaces and does not store the data in the DB server memory.
+TEXT also comes in TINY, MEDIUM and LONG sizes.
+
+4.) BLOB 
+Binary Large object.  
+Used for storing raw binary objects such as graphics or documents.
+BLOB also comes in TINY, MEDIUM and LONG sizes.
+
+5.) Int
+Standard 32 bit integer which may declared as signed or unsigned. 
+Used for whole numbers.
+
+6.) Float
+Single precision floating point number.
+Used for real numbers.
+
+7.) Double
+Double precision floating point number where size and number of digits
+after the decimal point may be defined.
+Use for extented accuracy.
+
+8.) Date
+Date in the format of YYYY-MM-DD.  Use as a date.
+
+9.) Timestamp
+Number of seconds since the beginning of the UNIX Epoch '1970-01-01 00:00:01' UTC.
+Note that a local Date/Time cast into a Timestamp variable or column are converted 
+into seconds from the UNIX epoch.  
+Use when date/times need to be manipulated mathmatically or the servers may span 
+multiple time zones.
+
+10.) Boolean
+True/False.  Note mySQL does not natively support booleans but rather represents 
+as a TinyInt where 0 is false , non-zero -true.
+Use for true/false values.
+
+
+
+What is your favorite thing you learned this week?
+How the ENGINE type , e.g INNODB , can effect constraints.
+
+Sources
+https://www.w3schools.com/mysql/mysql_datatypes.asp
+https://www.mysqltutorial.org/mysql-data-types.aspx

@@ -11,7 +11,7 @@ password VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL );
 -- Create Post table
 -- Posts are being limited to 16K of text. If graphics were desired would change to a BLOB
--- Post_data , as Text type,  is being cached outside the DB 
+-- Post_data , as Text type,  is being cached outside the in memory DB 
 -- If a user is deleted all their posts are deleted as well
 CREATE TABLE IF NOT EXISTS posts (
 post_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,4 +39,6 @@ Show tables;
 desc users;
 desc posts;
 desc comments;
+-- Student Note :  Due to some install problems the ENGINE types do not match
+-- To display the foreign key relations need to query the constraints table
 select * from information_schema.referential_constraints where constraint_schema = 'sqlweek3';
